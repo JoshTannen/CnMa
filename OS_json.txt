@@ -1,0 +1,38 @@
+{
+  "params": {
+    "index": "gca-honeyfarm-1-*,gca-honeyfarm-2-*",
+    "body": {
+      "size": 1000, 
+      "query": {
+        "bool": {
+          "must": [],
+          "filter": [
+            {
+              "match": {
+                "geoip.country_name": "Singapore"
+              }
+            },
+            {
+              "range": {
+                "startTime": {
+                  "gte": "now-1w/w",
+                  "lte": "now",
+                  "format": "strict_date_optional_time"
+                }
+              }
+            }
+          ],
+          "should": [],
+          "must_not": []
+        }
+      },
+      "search_after": [0],
+      "sort": [
+        {"@timestamp": "asc"}
+      ]
+    }
+  }
+}
+        
+    
+    
