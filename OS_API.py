@@ -7,6 +7,7 @@ import pandas as pd
 import json
 import requests
 import config
+import os
 
 #columns of interest
 COLS = ['Src IP',
@@ -26,7 +27,7 @@ COLS = ['Src IP',
 
 def osearch_load(size, queryls, search_after):
     # load basic json request
-    json_file = open(r"C:\Users\USER\Desktop\TrustedAI\gcahoneyfarm\CnMa\OS_json.txt")
+    json_file = open(os.getcwd()+"\\OS_json.txt")
     json_request = json.load(json_file)
     
     #update required query and params
