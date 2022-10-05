@@ -10,10 +10,10 @@ import config
 import os
 
 #columns of interest
-COLS = ['Src IP',
-        'Src Port',
-        'Dst IP',
-        'Dst Port',
+COLS = ['peerIP',
+        'peerPort',
+        'hostIP',
+        'hostPort',
         'commands',
         'hashes',
         'urls',
@@ -21,8 +21,8 @@ COLS = ['Src IP',
         'startTime',
         'endTime',
         'sort_num',
-        'Src Country',
-        'Dst Country'
+        'peerCountry',
+        'hostCountry'
        ]
 
 def osearch_load(size, queryls, search_after):
@@ -118,7 +118,7 @@ def opensearch_output(response_json):
                       'sort',
                       '_source.geoip.country_code2'
                      ]]
-        output.loc[:,'Dst Country'] = None
+        output.loc[:,'hostCountry'] = None
     
     output.columns = COLS
 
