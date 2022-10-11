@@ -64,7 +64,7 @@ def osearch_get(config, json_request):
     # take the session cookie and do search based on parameters required.
     response = requests.post('https://os.gcaaide.org/_dashboards/internal/search/opensearch', headers=headers,
                              json=json_request)
-    print(f"{response}, page successfully pulled.")
+    print(response)
     response_json = response.content.decode('utf-8').replace('\0', '')
     
     return response_json
@@ -76,19 +76,21 @@ def opensearch_output(response_json):
     #print('struct', struct)
     #print(f"Total hits: {struct['rawResponse']['hits']['total']}")
 
-    try:
-        df = pd.json_normalize(struct)
+    df = pd.json_normalize(struct)
 
-        test = df['rawResponse.hits.hits'][0]
-        #print('test', test)
-        df1 = pd.json_normalize(test)
+    test = df['rawResponse.hits.hits'][0]
+    #print('test', test)
+    df1 = pd.json_normalize(test)
+    #print(df1)
     
-    except:
-        data = [[None]*12]
-        output = pd.DataFrame(data, columns = COLS)
+    if len(df1)==0:
+        print("There is no valid data")
+        output = pd.DataFrame(None, columns = COLS)
         return output
-        
-    try: 
+
+    try:
+        #normal output
+        print("Output success")
         output = df1[['_source.peerIP',
                       '_source.peerPort',                  
                       '_source.hostIP',
@@ -103,8 +105,10 @@ def opensearch_output(response_json):
                       '_source.geoip.country_code2',
                       '_source.hostGeoip.country_code2'
                      ]]
+    
     except:
         #host country not available before ~August 20th 2022
+        print("Data is before August 20th 2022, no hostCountry data")
         output = df1[['_source.peerIP',
                       '_source.peerPort',                  
                       '_source.hostIP',
@@ -118,7 +122,7 @@ def opensearch_output(response_json):
                       'sort',
                       '_source.geoip.country_code2'
                      ]]
-        output.loc[:,'hostCountry'] = None
+        output.loc[:,'hostCountry'] = None  
     
     output.columns = COLS
 

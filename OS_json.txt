@@ -13,9 +13,19 @@
               }
             },
             {
+              "exists": {
+                "field": "hashes"
+              }
+            },
+            {
+              "query_string": {
+                "default_field": "commands", "query": "wget OR tftp"
+              }
+            },
+            {
               "range": {
                 "startTime": {
-                  "gte": "now-1w/w",
+                  "gte": "now-10d",
                   "lte": "now",
                   "format": "strict_date_optional_time"
                 }
