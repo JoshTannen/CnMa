@@ -1,0 +1,35 @@
+command,technique,tactic
+tftp,Remote file copy,Lateral movement
+ftpget,Remote file copy,Lateral movement
+wget,Remote file copy,Lateral movement
+curl,Remote file copy,Lateral movement
+rcp,Remote file copy,Lateral movement
+copy,Remote file copy,Lateral movement
+tar,Data compressed,Exfiltration
+zip,Data compressed,Exfiltration
+rar,Data compressed,Exfiltration
+shutdown,System shutdown/reboot,Impact
+reboot,System shutdown/reboot,Impact
+ultimate,Network denial of service,Impact
+del,File deletion,Defense evasion
+rm,File deletion,Defense evasion
+chmod,File and directory permissions modification,Defense evasion
+adduser,Create account,Persistence
+usermod,Account manipulation,Persistence
+groupadd,Account manipulation,Persistence
+dir,File and directory discovery,Discovery
+ls,File and directory discovery,Discovery
+cd,File and directory discovery,Discovery
+ps,Process discovery,Discovery
+show archive config,Credentials in files,Credential access
+show history,Input capture,Collection
+show logging,Input capture,Collection
+echo,Data from local system,Collection
+cat,Data from local system,Collection
+more,Data from local system,Collection
+pwd,Data from local system,Collection
+whoami,Data from local system,Collection
+sh,Exploitation for client Execution,Execution
+/mips,Exploitation for client Execution,Execution
+/zuki,Exploitation for client Execution,Execution
+/nig,Exploitation for client Execution,Execution
