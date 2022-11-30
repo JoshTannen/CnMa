@@ -10,12 +10,13 @@ crontab -l,Persistence,Scheduled Task/Job,T1053
 chmod,Privilege Escalation,Abuse Elevation Control Mechanism,T1548
 su,Privilege Escalation,Abuse Elevation Control Mechanism,T1548
 history -c,Defense Evasion,Indicator Removal,T1070
-rm ,Defense Evasion,Indicator Removal,T1070
+rm,Defense Evasion,Indicator Removal,T1070
 mkdir,Defense Evasion,File and Directory Permissions Modification,T1222
 .bash_history,Credential Access,Unsecured Credentials,T1552
 ifconfig,Discovery,System Network Configuration Discovery,T1016
 ipconfig,Discovery,System Network Configuration Discovery,T1016
 show running-config,Discovery,System Network Configuration Discovery,T1016
+w,Discovery,System Owner/User Discovery,T1033
 whoami,Discovery,System Owner/User Discovery,T1033
 nproc,Discovery,Process Discovery,T1057
 ps,Discovery,Process Discovery,T1057
@@ -41,7 +42,7 @@ zip,Collection,Archive Collected Data,T1560
 rar,Collection,Archive Collected Data,T1560
 curl,Command and Control,Ingress Tool Transfer,T1105
 dd,Command and Control,Ingress Tool Transfer,T1105
-ftpget,Command and Control,Ingress Tool Transfer,T1105
+ftpget ,Command and Control,Ingress Tool Transfer,T1105
 scp,Command and Control,Ingress Tool Transfer,T1105
 tftp,Command and Control,Ingress Tool Transfer,T1105
 wget,Command and Control,Ingress Tool Transfer,T1105
