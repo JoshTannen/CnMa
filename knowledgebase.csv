@@ -1,0 +1,58 @@
+command,tactic,technique,id
+enable,Execution,Command and Scripting Interpreter,T1059
+sh,Execution,Command and Scripting Interpreter,T1059
+shell,Execution,Command and Scripting Interpreter,T1059
+start,Execution,Command and Scripting Interpreter,T1059
+system,Execution,Command and Scripting Interpreter,T1059
+adduser,Persistence,Create Account,T1136
+useradd,Persistence,Create Account,T1136
+crontab -l,Persistence,Scheduled Task/Job,T1053
+chmod,Privilege Escalation,Abuse Elevation Control Mechanism,T1548
+su,Privilege Escalation,Abuse Elevation Control Mechanism,T1548
+history -c,Defense Evasion,Indicator Removal,T1070
+rm,Defense Evasion,Indicator Removal,T1070
+mkdir,Defense Evasion,File and Directory Permissions Modification,T1222
+.bash_history,Credential Access,Unsecured Credentials,T1552
+ifconfig,Discovery,System Network Configuration Discovery,T1016
+ipconfig,Discovery,System Network Configuration Discovery,T1016
+show running-config,Discovery,System Network Configuration Discovery,T1016
+w,Discovery,System Owner/User Discovery,T1033
+whoami,Discovery,System Owner/User Discovery,T1033
+nproc,Discovery,Process Discovery,T1057
+ps,Discovery,Process Discovery,T1057
+top,Discovery,Process Discovery,T1057
+awk,Discovery,System Information Discovery,T1082
+cat,Discovery,System Information Discovery,T1082
+df,Discovery,System Information Discovery,T1082
+echo,Discovery,System Information Discovery,T1082
+free,Discovery,System Information Discovery,T1082
+grep,Discovery,System Information Discovery,T1082
+head,Discovery,System Information Discovery,T1082
+lscpu,Discovery,System Information Discovery,T1082
+more,Discovery,System Information Discovery,T1082
+uname,Discovery,System Information Discovery,T1082
+wc,Discovery,System Information Discovery,T1082
+cd,Discovery,File and Directory Discovery,T1083
+dir,Discovery,File and Directory Discovery,T1083
+find,Discovery,File and Directory Discovery,T1083
+ls,Discovery,File and Directory Discovery,T1083
+which,Discovery,File and Directory Discovery,T1083
+tar,Collection,Archive Collected Data,T1560
+zip,Collection,Archive Collected Data,T1560
+rar,Collection,Archive Collected Data,T1560
+curl,Command and Control,Ingress Tool Transfer,T1105
+dd,Command and Control,Ingress Tool Transfer,T1105
+ftpget ,Command and Control,Ingress Tool Transfer,T1105
+scp,Command and Control,Ingress Tool Transfer,T1105
+tftp,Command and Control,Ingress Tool Transfer,T1105
+wget,Command and Control,Ingress Tool Transfer,T1105
+shutdown,Impact,System Shutdown/Reboot,T1529
+reboot,Impact,System Shutdown/Reboot,T1529
+
+
+
+
+
+
+
+
