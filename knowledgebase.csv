@@ -7,10 +7,10 @@ system,Execution,Command and Scripting Interpreter,T1059
 adduser,Persistence,Create Account,T1136
 useradd,Persistence,Create Account,T1136
 crontab -l,Persistence,Scheduled Task/Job,T1053
-chmod,Privilege Escalation,Abuse Elevation Control Mechanism,T1548
 su,Privilege Escalation,Abuse Elevation Control Mechanism,T1548
 history -c,Defense Evasion,Indicator Removal,T1070
 rm,Defense Evasion,Indicator Removal,T1070
+chmod,Defense Evasion,File and Directory Permissions Modification,T1222
 mkdir,Defense Evasion,File and Directory Permissions Modification,T1222
 .bash_history,Credential Access,Unsecured Credentials,T1552
 ifconfig,Discovery,System Network Configuration Discovery,T1016
